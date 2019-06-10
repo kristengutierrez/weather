@@ -4,9 +4,10 @@ const app = express()
 
 var port = process.env.PORT || 8080
 
+app.use( express.static( "views" ) );
+
 app.set('view engine', 'ejs')
 
-app.use( express.static( "views" ) );
 
 app.get('/', function (req, res) {
     res.render('index');
