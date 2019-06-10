@@ -11,7 +11,9 @@ app.get('/', function (req, res) {
 })
 
   app.post('/', function (req, res) {
-    let url = 'http://api.openweathermap.org/data/2.5/weather?id=2172797&units=imperial&appid=';
+    var secret = process.env.API_KEY;
+
+    let url = 'http://api.openweathermap.org/data/2.5/weather?id=2172797&units=imperial&appid='+ secret;
   
     request(url, function (err, response, body) {
       if(err){
