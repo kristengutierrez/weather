@@ -9,7 +9,6 @@
   <body>
     <div class="container">
       <img src="/images/penweather.jpg" alt="Penrod Weather" class="slds-align_absolute-center">
-      <fieldset>
         <form action="/" method="post">
         </form>
         <% if(locals.weather !== null){ %>
@@ -18,7 +17,6 @@
           <% if(locals.error !== null){ %>
             <p><%= locals.error %></p>
           <% } %>
-      </fieldset>
     </div>
   </body>
 </html>

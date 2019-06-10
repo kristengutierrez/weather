@@ -8,7 +8,6 @@ app.use( express.static( "views" ) );
 
 app.set('view engine', 'ejs')
 
-
 app.get('/', function (req, res) {
     res.render('index');
 })
@@ -27,7 +26,7 @@ var dallas_id = 4684888;
   app.post('/', function (req, res) {
     
     var secret = process.env.API_KEY;
-console.log("made it to post");
+    console.log("made it to post");
   	//build api URL 
     const baseUrl = "http://api.openweathermap.org/data/2.5/group?id=";
 
