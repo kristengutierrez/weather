@@ -9,6 +9,7 @@
   "author": "Kristen Kozmary",
   "license": "ISC",
   "dependencies": {
+    "@salesforce-ux/design-system": "^2.9.3",
     "ejs": "^2.6.1",
     "express": "^4.17.1",
     "request": "^2.88.0"
