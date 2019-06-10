@@ -26,7 +26,7 @@ var dallas_id = 4684888;
   app.post('/', function (req, res) {
     
     var secret = process.env.API_KEY;
-
+console.log("made it to post");
   	//build api URL 
     const baseUrl = "http://api.openweathermap.org/data/2.5/group?id=";
 
@@ -39,6 +39,7 @@ var dallas_id = 4684888;
     };
   
     request(locations(baseUrl, apiSpecifics), function (err, response, body) {
+      console.log("made it to request");
       if(err){
         res.render('index', {weather: null, error: 'Error, please try again'});
       } else {
