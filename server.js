@@ -51,9 +51,6 @@ var dallas_id = 4684888;
     });
   })
 
-window.onload = function(){
-  post
-}
 app.listen(port, function () {
   console.log('weather app running')
 })
