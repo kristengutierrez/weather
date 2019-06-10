@@ -8,9 +8,9 @@ app.use( express.static( "views" ) );
 
 app.set('view engine', 'ejs')
 
-app.get('/', function (req, res) {
-    res.render('index');
-})
+// app.get('/', function (req, res) {
+//     res.render('index');
+// })
 
 var milwaukee = "Milwaukee";
 var minneapolis = "Minneapolis";
@@ -23,7 +23,7 @@ var minneapolis_id = 5037649;
 var chicago_id = 4887398;
 var dallas_id = 4684888;
 
-  app.post('/', function (req, res) {
+  app.get('/', function (req, res) {
     
     var secret = process.env.API_KEY;
     console.log("made it to post");
