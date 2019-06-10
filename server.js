@@ -8,7 +8,7 @@ app.use( express.static( "views" ) );
 
 app.set('view engine', 'ejs')
 
-var api = require('./routes/api');
+var api = require('./routes/api.js');
 app.use('/', api);
 
 
