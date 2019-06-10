@@ -21,7 +21,7 @@ var minneapolis_id = 5037649;
 var chicago_id = 4887398;
 var dallas_id = 4684888;
 
-  app.post('/', function (req, res) {
+  app.get('/', function (req, res) {
     
     var secret = process.env.API_KEY;
 
@@ -51,7 +51,9 @@ var dallas_id = 4684888;
     });
   })
 
-
+window.onload = function(){
+  post
+}
 app.listen(port, function () {
   console.log('weather app running')
 })
