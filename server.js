@@ -22,11 +22,21 @@ var chicago_id = 4887398;
 var dallas_id = 4684888;
 
   app.post('/', function (req, res) {
+    
     var secret = process.env.API_KEY;
-    let url = "http://api.openweathermap.org/data/2.5/group?id=" + milwaukee_id + "," + minneapolis_id + "," + chicago_id + "," + dallas_id + "&units=imperial&appid=" + secret;
-    //let url = 'http://api.openweathermap.org/data/2.5/weather?id=2172797&units=imperial&appid='+ secret;
+
+  	//build api URL 
+    const baseUrl = "http://api.openweathermap.org/data/2.5/group?id=";
+
+		const apiSpecifics = milwaukee_id + "," + minneapolis_id + "," + chicago_id + "," + dallas_id + "&units=imperial&appid=" + secret;
+
+		const locations = (url1, url2) => {
+
+		   let newUrl = url1 + url2;
+		   return newUrl;
+    };
   
-    request(url, function (err, response, body) {
+    request(locations(baseUrl, apiSpecifics), function (err, response, body) {
       if(err){
         res.render('index', {weather: null, error: 'Error, please try again'});
       } else {
