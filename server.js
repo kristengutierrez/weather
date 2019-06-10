@@ -21,7 +21,7 @@ var minneapolis_id = 5037649;
 var chicago_id = 4887398;
 var dallas_id = 4684888;
 
-  app.get('/', function (req, res) {
+  app.post('/', function (req, res) {
     
     var secret = process.env.API_KEY;
 
