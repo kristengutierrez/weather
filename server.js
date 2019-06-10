@@ -31,7 +31,7 @@ var dallas_id = 4684888;
         res.render('index', {weather: null, error: 'Error, please try again'});
       } else {
         let weather = JSON.parse(body)
-        if(weather.main == undefined){
+        if(weather.list[0].main == undefined){
           res.render('index', {weather: null, error: 'Error, please try again'});
         } else {
           let weatherText = `It's ${weather.list[0].main.temp} degrees in ${weather.list[0].name}!`;
