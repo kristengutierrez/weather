@@ -4,15 +4,10 @@
     <meta charset="utf-8">
     <title>Weather</title>
     <link rel="stylesheet" type="text/css" href="/assets/styles/salesforce-lightning-design-system.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="/style.css"> -->
   </head>
   <body>
     <div class="container">
       <img src="/images/penweather.jpg" alt="Penrod Weather" class="slds-align_absolute-center">
-        <!-- <form action="/" method="post">
-          <input name="city" type="text" placeholder="Enter a City" required>
-          <input type="submit" value="Get Weather">
-        </form> -->
         <% if(locals.weather !== null){ %>
             <p><%= locals.weather %></p>
           <% } %>
