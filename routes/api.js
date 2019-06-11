@@ -9,6 +9,7 @@ var minneapolis_id = 5037649;
 var chicago_id = 4887398;
 var dallas_id = 4684888;
 
+
   router.get('/', function (req, res) {
     
     var secret = process.env.API_KEY;
@@ -23,6 +24,7 @@ var dallas_id = 4684888;
 		   return newUrl;
     };
   
+    //making the http call
     request(completeUrl(baseUrl, apiSpecifics), function (err, response, body) {
       if(err){
         res.render('index', {milWeather: null, milDesc: null, minWeather: null, minDesc: null, chiWeather: null, chiDesc: null, dalWeather: null, dalDesc: null, error: 'Error fetching weather.'});
@@ -32,8 +34,10 @@ var dallas_id = 4684888;
         if(weather.list[0].main == undefined){
           res.render('index', {milWeather: null, milDesc: null, minWeather: null, minDesc: null, chiWeather: null, chiDesc: null, dalWeather: null, dalDesc: null, error: 'Error fetching weather.'});
         } else {
+          //assigning each city with the right weather details
+          //array doesn't always come back in the same order
           var i;
-          for (i = 0; i <CITY_COUNT; i++) {
+          for (i = 0; i < CITY_COUNT; i++) {
 
             if (weather.list[i].name == "Milwaukee") {
               let temp = Math.round(weather.list[i].main.temp);
