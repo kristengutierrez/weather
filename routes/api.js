@@ -37,23 +37,23 @@ var dallas_id = 4684888;
 
             if (weather.list[i].name == "Milwaukee") {
 
-              var milwaukee_temp = weather.list[0].main.temp + "° F";
-              var milwaukee_desc = weather.list[1].weather[0].description;
+              var milwaukee_temp = weather.list[i].main.temp + "° F";
+              var milwaukee_desc = weather.list[i].weather[0].description;
 
             } else if (weather.list[i].name == "Minneapolis") {
 
-                var minneapolis_temp = weather.list[1].main.temp + "° F";
-                var minneapolis_desc = weather.list[1].weather.description;
+                var minneapolis_temp = weather.list[i].main.temp + "° F";
+                var minneapolis_desc = weather.list[i].weather[0].description;
 
               } else if (weather.list[i].name == "Chicago") {
 
-                var chicago_temp = weather.list[2].main.temp + "° F";
-                var chicago_desc = weather.list[2].weather.description;
+                var chicago_temp = weather.list[i].main.temp + "° F";
+                var chicago_desc = weather.list[i].weather[0].description;
 
                 } else if (weather.list[i].name == "Dallas") {
 
-                  var dallas_temp = weather.list[1].main.temp + "° F";
-                  var dallas_desc = weather.list[1].weather.description;
+                  var dallas_temp = weather.list[i].main.temp + "° F";
+                  var dallas_desc = weather.list[i].weather[0].description;
 
                 } 
             }
