@@ -25,12 +25,12 @@ var dallas_id = 4684888;
   
     request(completeUrl(baseUrl, apiSpecifics), function (err, response, body) {
       if(err){
-        res.render('index', {milWeather: null, milDesc: null, minWeather: null, minDesc: null, chiWeather: null, chiDesc: null, dalWeather: null, dalDesc: null, error: 'Error, please try again'});
+        res.render('index', {milWeather: null, milDesc: null, minWeather: null, minDesc: null, chiWeather: null, chiDesc: null, dalWeather: null, dalDesc: null, error: 'Error fetching weather.'});
       } else {
         let weather = JSON.parse(body);
         console.log(weather);
         if(weather.list[0].main == undefined){
-          res.render('index', {milWeather: null, milDesc: null, minWeather: null, minDesc: null, chiWeather: null, chiDesc: null, dalWeather: null, dalDesc: null, error: 'Error, please try again'});
+          res.render('index', {milWeather: null, milDesc: null, minWeather: null, minDesc: null, chiWeather: null, chiDesc: null, dalWeather: null, dalDesc: null, error: 'Error fetching weather.'});
         } else {
           var i;
           for (i = 0; i <CITY_COUNT; i++) {
@@ -42,17 +42,17 @@ var dallas_id = 4684888;
 
             } else if (weather.list[i].name == "Minneapolis") {
 
-                var minneapolis_temp = weather.list[1].main.temp;
+                var minneapolis_temp = weather.list[1].main.temp + "° F";
                 var minneapolis_desc = weather.list[1].weather.description;
 
               } else if (weather.list[i].name == "Chicago") {
 
-                var chicago_temp = weather.list[2].main.temp;
+                var chicago_temp = weather.list[2].main.temp + "° F";
                 var chicago_desc = weather.list[2].weather.description;
 
                 } else if (weather.list[i].name == "Dallas") {
 
-                  var dallas_temp = weather.list[1].main.temp;
+                  var dallas_temp = weather.list[1].main.temp + "° F";
                   var dallas_desc = weather.list[1].weather.description;
 
                 } 
