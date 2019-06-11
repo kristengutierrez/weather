@@ -1,5 +1,5 @@
 # weather
-Simple weather app using Javascript, HTML, EJS, NodeJS, Express, and SLDS. 
+Simple weather app using Javascript, HTML, EJS, NodeJS, Express, Heroku, and SLDS. 
 
 Website: https://serene-earth-24674.herokuapp.com/
 
