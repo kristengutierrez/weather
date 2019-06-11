@@ -43,7 +43,7 @@ var dallas_id = 4684888;
               //   description += weather.list[0].weather[i] + ",";
               // }
               console.log("DESCRIPTION: ", weather.list[0].weather.length);
-              var milwaukee_desc = description;
+              var milwaukee_desc = weather.list[1].weather[0].description;
               console.log("MILWAUKEE DESCRIPTION:", milwaukee_desc);
 
             } else if (weather.list[i].name == "Minneapolis") {
