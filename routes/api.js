@@ -3,11 +3,6 @@ var router = require('express').Router();
 
 const CITY_COUNT = 4
 
-var milwaukee = "Milwaukee";
-var minneapolis = "Minneapolis";
-var chicago = "Chicago";
-var dallas = "Dallas";
-
 //city ids from openweathermap
 var milwaukee_id = 5263045;
 var minneapolis_id = 5037649;
@@ -23,12 +18,12 @@ var dallas_id = 4684888;
 
 		const apiSpecifics = milwaukee_id + "," + minneapolis_id + "," + chicago_id + "," + dallas_id + "&units=imperial&appid=" + secret;
 
-		const locations = (url1, url2) => {
+		const completeUrl = (url1, url2) => {
 		   let newUrl = url1 + url2;
 		   return newUrl;
     };
   
-    request(locations(baseUrl, apiSpecifics), function (err, response, body) {
+    request(completeUrl(baseUrl, apiSpecifics), function (err, response, body) {
       if(err){
         res.render('index', {milWeather: null, milDesc: null, minWeather: null, minDesc: null, chiWeather: null, chiDesc: null, dalWeather: null, dalDesc: null, error: 'Error, please try again'});
       } else {
@@ -39,22 +34,28 @@ var dallas_id = 4684888;
         } else {
           var i;
           for (i = 0; i <CITY_COUNT; i++) {
+
             if (weather.list[i].name == "Milwaukee") {
-              console.log("made it to milwaukee");
-              var milwaukee_temp = weather.list[0].main.temp + '&deg;';
+
+              var milwaukee_temp = weather.list[0].main.temp;
               var milwaukee_desc = weather.list[0].description;
+              console.log("MILWAUKEE DESCRIPTION:", milwaukee_desc);
+
             } else if (weather.list[i].name == "Minneapolis") {
-                console.log("made it to minneapolis");
-                var minneapolis_temp = weather.list[1].main.temp + '&deg;';
+
+                var minneapolis_temp = weather.list[1].main.temp;
                 var minneapolis_desc = weather.list[1].description;
+
               } else if (weather.list[i].name == "Chicago") {
-                console.log("made it to chicago");
-                var chicago_temp = weather.list[2].main.temp + '&deg;';
+
+                var chicago_temp = weather.list[2].main.temp;
                 var chicago_desc = weather.list[2].description;
+
                 } else if (weather.list[i].name == "Dallas") {
-                  console.log("made it to dallas");
-                  var dallas_temp = weather.list[1].main.temp + '&deg;';
+
+                  var dallas_temp = weather.list[1].main.temp;
                   var dallas_desc = weather.list[1].description;
+
                 } 
             }
           res.render('index', {milWeather: milwaukee_temp, milDesc: milwaukee_desc, minWeather: minneapolis_temp, minDesc: minneapolis_desc, chiWeather: chicago_temp, chiDesc: chicago_desc, dalWeather: dallas_temp, dalDesc: dallas_desc, error: null});
