@@ -6,14 +6,24 @@
     <link rel="stylesheet" type="text/css" href="/assets/styles/salesforce-lightning-design-system.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="slds-grid slds-gutters">
       <img src="/images/penweather.jpg" alt="Penrod Weather" class="slds-align_absolute-center">
-        <% if(locals.weather !== null){ %>
-            <p><%= locals.weather %></p>
-          <% } %>
-          <% if(locals.error !== null){ %>
-            <p><%= locals.error %></p>
-          <% } %>
+        <div class="slds-col slds-size_1-of-2">
+            <% if(locals.weather !== null){ %>
+              <p><%= locals.weather %></p>
+            <% } %>
+            <% if(locals.error !== null){ %>
+              <p><%= locals.error %></p>
+            <% } %>
+        </div>
+        <div class="slds-col slds-size_1-of-2">
+            <% if(locals.weather !== null){ %>
+              <p><%= locals.weather %></p>
+            <% } %>
+            <% if(locals.error !== null){ %>
+              <p><%= locals.error %></p>
+            <% } %>
+          </div>
     </div>
   </body>
 </html>
