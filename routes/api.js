@@ -12,6 +12,7 @@ var dallas_id = 4684888;
 
   router.get('/', function (req, res) {
     
+    //storing key in heroku env var
     var secret = process.env.API_KEY;
     
   	//build api URL 
