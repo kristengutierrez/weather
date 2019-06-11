@@ -6,8 +6,9 @@
     <link rel="stylesheet" type="text/css" href="/assets/styles/salesforce-lightning-design-system.css" />
   </head>
   <body>
-    <div class="slds-grid slds-gutters">
+    <div>
       <img src="/images/penweather.jpg" alt="Penrod Weather" class="slds-align_absolute-center">
+    <div class="slds-grid slds-gutters">
         <div class="slds-col slds-size_1-of-2">
             <% if(locals.weather !== null){ %>
               <p><%= locals.weather %></p>
@@ -25,5 +26,6 @@
             <% } %>
           </div>
     </div>
+  </div>
   </body>
 </html>
