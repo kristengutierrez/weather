@@ -39,22 +39,22 @@ var dallas_id = 4684888;
         } else {
           var i;
           for (i = 0; i <CITY_COUNT; i++) {
-            if (weatherData.list[i].name == "Milwaukee") {
+            if (weather.list[i].name == "Milwaukee") {
               console.log("made it to milwaukee");
-              var milwaukee_temp = weatherData.list[0].main.temp + '&deg;';
-              var milwaukee_desc = weatherData.list[0].description;
-            } else if (weatherData.list[i].name == "Minneapolis") {
+              var milwaukee_temp = weather.list[0].main.temp + '&deg;';
+              var milwaukee_desc = weather.list[0].description;
+            } else if (weather.list[i].name == "Minneapolis") {
                 console.log("made it to minneapolis");
-                var minneapolis_temp = weatherData.list[1].main.temp + '&deg;';
-                var minneapolis_desc = weatherData.list[1].description;
-              } else if (weatherData.list[i].name == "Chicago") {
+                var minneapolis_temp = weather.list[1].main.temp + '&deg;';
+                var minneapolis_desc = weather.list[1].description;
+              } else if (weather.list[i].name == "Chicago") {
                 console.log("made it to chicago");
-                var chicago_temp = weatherData.list[2].main.temp + '&deg;';
-                var chicago_desc = weatherData.list[2].description;
-                } else if (weatherData.list[i].name == "Dallas") {
+                var chicago_temp = weather.list[2].main.temp + '&deg;';
+                var chicago_desc = weather.list[2].description;
+                } else if (weather.list[i].name == "Dallas") {
                   console.log("made it to dallas");
-                  var dallas_temp = weatherData.list[1].main.temp + '&deg;';
-                  var dallas_desc = weatherData.list[1].description;
+                  var dallas_temp = weather.list[1].main.temp + '&deg;';
+                  var dallas_desc = weather.list[1].description;
                 } 
             }
           res.render('index', {milWeather: milwaukee_temp, milDesc: milwaukee_desc, minWeather: minneapolis_temp, minDesc: minneapolis_desc, chiWeather: chicago_temp, chiDesc: chicago_desc, dalWeather: dallas_temp, dalDesc: dallas_desc, error: null});
