@@ -1,94 +1,97 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="refresh" content="600"> 
-    <title>Weather</title>
-    <link rel="stylesheet" type="text/css" href="/assets/styles/salesforce-lightning-design-system.css" />
-  </head>
-  <body>
-    <div>
-      <img src="/images/penweather.jpg" alt="Penrod Weather" class="slds-align_absolute-center slds-m-bottom_large">
-      <div class="slds-m-around_xx-large">
-    <div class="slds-grid slds-wrap slds-gutters slds-grid_align-space">
-        <div class="slds-col slds-size_1-of-4 slds-theme_alt-inverse slds-p-around_x-small slds-m-around_xx-large">
-            <span class="slds-align_absolute-center" style="font-size: 16pt">Milwaukee</span>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="refresh" content="600">
+  <title>Weather</title>
+  <link rel="stylesheet" type="text/css" href="/assets/styles/salesforce-lightning-design-system.css" />
+</head>
+
+<body>
+  <div>
+    <img src="/images/penweather.jpg" alt="Penrod Weather" class="slds-align_absolute-center slds-m-bottom_large">
+    <div class="slds-m-around_xx-large">
+      <div class="slds-grid slds-wrap slds-gutters slds-grid_align-space">
+        <div class="slds-col slds-size_1-of-3 slds-theme_alt-inverse slds-p-around_x-small slds-m-around_xx-large">
+          <span class="slds-align_absolute-center" style="font-size: 16pt">Milwaukee</span>
           <div class="slds-align_absolute-center">
-              <% if(locals.milWeather !== null){ %>
-                <h1 style="font-size: 50pt"><%= locals.milWeather %></h1>
-              <% } %>
-              <% if(locals.error !== null){ %>
-                <p><%= locals.error %></p>
-              <% } %>
+            <% if(locals.milWeather !== null){ %>
+            <h1 style="font-size: 50pt"><%= locals.milWeather %></h1>
+            <% } %>
+            <% if(locals.error !== null){ %>
+            <p><%= locals.error %></p>
+            <% } %>
           </div>
           <div class="slds-align_absolute-center">
-              <% if(locals.milDesc !== null){ %>
-                <p><%= locals.milDesc %></p>
-              <% } %>
-              <% if(locals.error !== null){ %>
-                <p><%= locals.error %></p>
-              <% } %>
+            <% if(locals.milDesc !== null){ %>
+            <p><%= locals.milDesc %></p>
+            <% } %>
+            <% if(locals.error !== null){ %>
+            <p><%= locals.error %></p>
+            <% } %>
           </div>
         </div>
-        <div class="slds-col slds-size_1-of-4 slds-theme_alt-inverse slds-p-around_x-small slds-m-around_xx-large">
-            <span class="slds-align_absolute-center" style="font-size: 16pt">Minneapolis</span>
+        <div class="slds-col slds-size_1-of-3 slds-theme_alt-inverse slds-p-around_x-small slds-m-around_xx-large">
+          <span class="slds-align_absolute-center" style="font-size: 16pt">Minneapolis</span>
           <div class="slds-align_absolute-center">
-              <% if(locals.minWeather !== null){ %>
-                <h1 style="font-size: 50pt"><%= locals.minWeather %></h1>
-              <% } %>
-              <% if(locals.error !== null){ %>
-                <p><%= locals.error %></p>
-              <% } %>
+            <% if(locals.minWeather !== null){ %>
+            <h1 style="font-size: 50pt"><%= locals.minWeather %></h1>
+            <% } %>
+            <% if(locals.error !== null){ %>
+            <p><%= locals.error %></p>
+            <% } %>
           </div>
           <div class="slds-align_absolute-center">
-              <% if(locals.minDesc !== null){ %>
-                <p><%= locals.minDesc %></p>
-              <% } %>
-              <% if(locals.error !== null){ %>
-                <p><%= locals.error %></p>
-              <% } %>
+            <% if(locals.minDesc !== null){ %>
+            <p><%= locals.minDesc %></p>
+            <% } %>
+            <% if(locals.error !== null){ %>
+            <p><%= locals.error %></p>
+            <% } %>
           </div>
+        </div>
+        <div class="slds-col slds-size_1-of-3 slds-theme_alt-inverse slds-p-around_x-small slds-m-around_xx-large">
+          <span class="slds-align_absolute-center" style="font-size: 16pt">Chicago</span>
+          <div class="slds-align_absolute-center">
+            <% if(locals.chiWeather !== null){ %>
+            <h1 style="font-size: 50pt"><%= locals.chiWeather %></h1>
+            <% } %>
+            <% if(locals.error !== null){ %>
+            <p><%= locals.error %></p>
+            <% } %>
           </div>
-          <div class="slds-col slds-size_1-of-4 slds-theme_alt-inverse slds-p-around_x-small slds-m-around_xx-large">
-              <span class="slds-align_absolute-center" style="font-size: 16pt">Chicago</span>
-            <div class="slds-align_absolute-center">
-                <% if(locals.chiWeather !== null){ %>
-                  <h1 style="font-size: 50pt"><%= locals.chiWeather %></h1>
-                <% } %>
-                <% if(locals.error !== null){ %>
-                  <p><%= locals.error %></p>
-                <% } %>
-            </div>
-            <div class="slds-align_absolute-center">
-                <% if(locals.chiDesc !== null){ %>
-                  <p><%= locals.chiDesc %></p>
-                <% } %>
-                <% if(locals.error !== null){ %>
-                  <p><%= locals.error %></p>
-                <% } %>
-            </div>
+          <div class="slds-align_absolute-center">
+            <% if(locals.chiDesc !== null){ %>
+            <p><%= locals.chiDesc %></p>
+            <% } %>
+            <% if(locals.error !== null){ %>
+            <p><%= locals.error %></p>
+            <% } %>
           </div>
-            <div class="slds-col slds-size_1-of-4 slds-theme_alt-inverse slds-p-around_x-small slds-m-around_xx-large">
-                <span class="slds-align_absolute-center" style="font-size: 16pt">Dallas</span>
-                <div class="slds-align_absolute-center">
-                    <% if(locals.dalWeather !== null){ %>
-                      <h1 style="font-size: 50pt"><%= locals.dalWeather %></h1>
-                    <% } %>
-                    <% if(locals.error !== null){ %>
-                      <p><%= locals.error %></p>
-                    <% } %>
-                </div>
-                <div class="slds-align_absolute-center">
-                    <% if(locals.dalDesc !== null){ %>
-                      <p><%= locals.dalDesc %></p>
-                    <% } %>
-                    <% if(locals.error !== null){ %>
-                      <p><%= locals.error %></p>
-                    <% } %>
-                </div>
+        </div>
+        <div class="slds-col slds-size_1-of-3 slds-theme_alt-inverse slds-p-around_x-small slds-m-around_xx-large">
+          <span class="slds-align_absolute-center" style="font-size: 16pt">Dallas</span>
+          <div class="slds-align_absolute-center">
+            <% if(locals.dalWeather !== null){ %>
+            <h1 style="font-size: 50pt"><%= locals.dalWeather %></h1>
+            <% } %>
+            <% if(locals.error !== null){ %>
+            <p><%= locals.error %></p>
+            <% } %>
           </div>
+          <div class="slds-align_absolute-center">
+            <% if(locals.dalDesc !== null){ %>
+            <p><%= locals.dalDesc %></p>
+            <% } %>
+            <% if(locals.error !== null){ %>
+            <p><%= locals.error %></p>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-  </div>
-  </body>
+</body>
+
 </html>
