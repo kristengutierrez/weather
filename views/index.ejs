@@ -29,7 +29,7 @@
           </div>
         </div>
         <div class="slds-col slds-size_1-of-2">
-          Minneapolis
+          <span>Minneapolis</span>
           <div class="slds-m-left_medium">
               <% if(locals.minWeather !== null){ %>
                 <p><%= locals.minWeather %></p>
@@ -48,7 +48,7 @@
           </div>
           </div>
           <div class="slds-col slds-size_1-of-2">
-            Chicago
+            <span>Chicago</span>
             <div class="slds-m-left_medium">
                 <% if(locals.chiWeather !== null){ %>
                   <p><%= locals.chiWeather %></p>
@@ -65,8 +65,9 @@
                   <p><%= locals.error %></p>
                 <% } %>
             </div>
+          </div>
             <div class="slds-col slds-size_1-of-2">
-                Dallas
+                <span>Dallas</span>
                 <div class="slds-m-left_medium">
                     <% if(locals.dalWeather !== null){ %>
                       <p><%= locals.dalWeather %></p>
@@ -84,7 +85,7 @@
                     <% } %>
                 </div>
           </div>
-    </div>
+  </div>
   </div>
   </body>
 </html>
