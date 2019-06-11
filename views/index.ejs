@@ -8,7 +8,7 @@
   <body>
     <div>
       <img src="/images/penweather.jpg" alt="Penrod Weather" class="slds-align_absolute-center">
-    <div class="slds-grid slds-gutters" class="slds-m-left_medium">
+    <div class="slds-grid slds-gutters slds-wrap">
         <div class="slds-col slds-size_1-of-2">
             <span>Milwaukee</span>
           <div class="slds-m-left_medium">
@@ -65,6 +65,24 @@
                   <p><%= locals.error %></p>
                 <% } %>
             </div>
+            <div class="slds-col slds-size_1-of-2">
+                Dallas
+                <div class="slds-m-left_medium">
+                    <% if(locals.dalWeather !== null){ %>
+                      <p><%= locals.dalWeather %></p>
+                    <% } %>
+                    <% if(locals.error !== null){ %>
+                      <p><%= locals.error %></p>
+                    <% } %>
+                </div>
+                <div class="slds-m-left_medium">
+                    <% if(locals.dalDesc !== null){ %>
+                      <p><%= locals.dalDesc %></p>
+                    <% } %>
+                    <% if(locals.error !== null){ %>
+                      <p><%= locals.error %></p>
+                    <% } %>
+                </div>
           </div>
     </div>
   </div>
