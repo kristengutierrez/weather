@@ -38,7 +38,12 @@ var dallas_id = 4684888;
             if (weather.list[i].name == "Milwaukee") {
 
               var milwaukee_temp = weather.list[0].main.temp;
-              var milwaukee_desc = weather.list[0].weather.description;
+              var description = "";
+              for (var i = 0; i < weather.list[0].weather.length; i++) {
+                description += weather.list[0].weather[i] + ",";
+                console.log("DESCRIPTION: ", description);
+              }
+              var milwaukee_desc = description;
               console.log("MILWAUKEE DESCRIPTION:", milwaukee_desc);
 
             } else if (weather.list[i].name == "Minneapolis") {
