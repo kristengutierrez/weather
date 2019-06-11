@@ -18,9 +18,9 @@ var dallas_id = 4684888;
   	//build api URL 
     const baseUrl = "http://api.openweathermap.org/data/2.5/group?id=";
 
-		const apiSpecifics = milwaukee_id + "," + minneapolis_id + "," + chicago_id + "," + dallas_id + "&units=imperial&appid=" + secret;
+    const apiSpecifics = milwaukee_id + "," + minneapolis_id + "," + chicago_id + "," + dallas_id + "&units=imperial&appid=" + secret;
 
-		const completeUrl = (url1, url2) => {
+    const completeUrl = (url1, url2) => {
 		   let newUrl = url1 + url2;
 		   return newUrl;
     };
