@@ -40,22 +40,22 @@ var dallas_id = 4684888;
           for (i = 0; i < CITY_COUNT; i++) {
 
             if (weather.list[i].name == "Milwaukee") {
-              let temp = Math.round(weather.list[i].main.temp);
+              let temp = RoundTemp(weather.list[i].main.temp);
               var milwaukee_temp = temp + "°";
               var milwaukee_desc = weather.list[i].weather[0].description;
 
             } else if (weather.list[i].name == "Minneapolis") {
-              let temp = Math.round(weather.list[i].main.temp);
+              let temp = RoundTemp(weather.list[i].main.temp);
               var minneapolis_temp = temp + "°";
               var minneapolis_desc = weather.list[i].weather[0].description;
 
               } else if (weather.list[i].name == "Chicago") {
-                let temp = Math.round(weather.list[i].main.temp);
+                let temp = RoundTemp(weather.list[i].main.temp);
                 var chicago_temp = temp + "°";
                 var chicago_desc = weather.list[i].weather[0].description;
 
                 } else if (weather.list[i].name == "Dallas") {
-                  let temp = Math.round(weather.list[i].main.temp);
+                  let temp = RoundTemp(weather.list[i].main.temp);
                   var dallas_temp = temp + "°";
                   var dallas_desc = weather.list[i].weather[0].description;
 
@@ -67,6 +67,8 @@ var dallas_id = 4684888;
     });
   })
 
-
+function RoundTemp(temp) {
+  return Math.round(temp);
+}
 
 module.exports = router;
