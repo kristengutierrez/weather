@@ -11,8 +11,16 @@
     <div class="slds-grid slds-gutters" class="slds-m-left_medium">
         <div class="slds-col slds-size_1-of-2">
           <div class="slds-m-left_medium">
-              <% if(locals.weather !== null){ %>
-                <p><%= locals.weather %></p>
+              <% if(locals.milWeather !== null){ %>
+                <p><%= locals.milWeather %></p>
+              <% } %>
+              <% if(locals.error !== null){ %>
+                <p><%= locals.error %></p>
+              <% } %>
+          </div>
+          <div>
+              <% if(locals.milDesc !== null){ %>
+                <p><%= locals.milDesc %></p>
               <% } %>
               <% if(locals.error !== null){ %>
                 <p><%= locals.error %></p>
