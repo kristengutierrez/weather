@@ -47,11 +47,11 @@
               <% } %>
           </div>
           </div>
-          <div class="slds-col slds-size_1-of-2 slds-m-around_x-small" style="height:300px">
+          <div class="slds-col slds-size_1-of-2" style="height:300px">
               <span class="slds-align_absolute-center" style="font-size: 16pt">Chicago</span>
             <div class="slds-align_absolute-center">
                 <% if(locals.chiWeather !== null){ %>
-                  <h1><%= locals.chiWeather %></h1>
+                  <h1 style="font-size: 50pt"><%= locals.chiWeather %></h1>
                 <% } %>
                 <% if(locals.error !== null){ %>
                   <p><%= locals.error %></p>
@@ -66,7 +66,7 @@
                 <% } %>
             </div>
           </div>
-            <div class="slds-col slds-size_1-of-2 slds-m-around_x-small" style="height:300px">
+            <div class="slds-col slds-size_1-of-2" style="height:300px">
                 <span class="slds-align_absolute-center" style="font-size: 16pt">Dallas</span>
                 <div class="slds-align_absolute-center">
                     <% if(locals.dalWeather !== null){ %>
