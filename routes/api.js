@@ -1,3 +1,4 @@
+const request = require('request')
 var router = require('express').Router();
 
 var milwaukee = "Milwaukee";

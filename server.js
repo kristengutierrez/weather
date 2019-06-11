@@ -1,5 +1,4 @@
 const express = require('express')
-const request = require('request')
 const app = express()
 
 var port = process.env.PORT || 8080
